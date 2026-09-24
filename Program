@@ -1,0 +1,38 @@
+import java.util.Scanner; //добавляем сканер
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in); //создаем сканер
+
+        int X = sc.nextInt();//считываем X
+
+        int A = sc.nextInt();//считываем остальное
+        int B = sc.nextInt();
+        int C = sc.nextInt();
+        int D = sc.nextInt();
+     
+        int rA = A % X;//ищем остатки
+        int rB = B % X;
+        int rC = C % X;
+        int rD = D % X;
+
+        int bestNumber = A;//заготовки для поиска
+        int bestRemainder = rA;
+
+        if (rB < bestRemainder) {
+            bestRemainder = rB; //сравниваем и присваиваем
+            bestNumber = B;
+        }
+        if (rC < bestRemainder) {
+            bestRemainder = rC;
+            bestNumber = C;
+        }
+        if (rD < bestRemainder) {
+            bestRemainder = rD;
+            bestNumber = D;
+        }
+
+        System.out.println(bestNumber);//выводим ответ
+        sc.close();
+    }
+}
