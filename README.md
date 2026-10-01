@@ -124,11 +124,18 @@ public class Main {
         long B = sc.nextLong();
         long C = sc.nextLong();
         long D = sc.nextLong();
+        
+        long X1 = Math.abs(X);
 
-        long rA = A % X;
-        long rB = B % X;
-        long rC = C % X;
-        long rD = D % X;
+        long A1 = Math.abs(A);
+        long B1 = Math.abs(B);
+        long C1 = Math.abs(C);
+        long D1 = Math.abs(D);
+
+        long rA = A1 % X1;
+        long rB = B1 % X1;
+        long rC = C1 % X1;
+        long rD = D1 % X1;
 
         long bestNumber = A;
         long bestRemainder = rA;
